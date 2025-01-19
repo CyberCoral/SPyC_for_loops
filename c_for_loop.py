@@ -143,7 +143,7 @@ def Custom_C_for_loop(used_variables: dict = {"i":0}, exit_clause = lambda x: Tr
             raise TypeError("This value must be a bool.")
             
         # Checks if there are enough variables for code.
-        elif code_part[1].__code__.co_argcount >= len(list(variables.keys())): 
+        elif code_part[1].__code__.co_argcount > len(list(variables.keys())): 
             raise IndexError("There are not enough variables for code.")
         
         # Checks if there are enough variables on the index part of code to be used in code.
